@@ -1,4 +1,4 @@
-package com.example.abousalem.messengerapp.view
+package com.example.abousalem.messengerapp.view.dialog_view
 
 import android.app.Activity
 import android.app.Dialog
@@ -8,9 +8,9 @@ import com.bumptech.glide.request.target.GlideDrawableImageViewTarget
 import com.example.abousalem.messengerapp.R
 import kotlinx.android.synthetic.main.my_custom_dialoge.*
 
-class DialogView(internal var activity: Activity) {
+class DialogView(var activity: Activity) {
     
-    internal var dialog: Dialog? =null
+    var dialog: Dialog? =null
 
     fun showDialog() {
         dialog = Dialog(activity)

@@ -1,9 +1,9 @@
-package com.example.abousalem.messengerapp.view
+package com.example.abousalem.messengerapp.view.latest_messages
 
-import com.example.abousalem.messengerapp.LatestMessagesActivity
 import com.example.abousalem.messengerapp.R
 import com.example.abousalem.messengerapp.model.ChatMessage
 import com.example.abousalem.messengerapp.model.User
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -18,7 +18,7 @@ class LatestMessageRow(val chatMessage: ChatMessage): Item<ViewHolder>(){
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.message_textview_latest_message.text = chatMessage.text
         val partnerId: String
-        if(chatMessage.fromId == LatestMessagesActivity.uid){
+        if(chatMessage.fromId == FirebaseAuth.getInstance().uid){
             partnerId = chatMessage.toId
         }else{
             partnerId = chatMessage.fromId

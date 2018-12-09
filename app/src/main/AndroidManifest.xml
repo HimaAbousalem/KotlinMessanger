@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".LatestMessagesActivity">
+        <activity android:name=".view.latest_messages.LatestMessagesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Authentication.RegisterActivity" />
-        <activity android:name=".Authentication.LoginActivity" />
-        <activity android:name=".NewMessageActivity"/>
-        <activity android:name=".ChatLogActivity"/>
+        <activity android:name="com.example.abousalem.messengerapp.view.register.RegisterActivity" />
+        <activity android:name="com.example.abousalem.messengerapp.view.login.LoginActivity" />
+        <activity android:name=".view.new_message.NewMessageActivity"/>
+        <activity android:name=".view.chat_log.ChatLogActivity"/>
+        <activity android:name=".base.BaseActivity"/>
     </application>
 
 </manifest>

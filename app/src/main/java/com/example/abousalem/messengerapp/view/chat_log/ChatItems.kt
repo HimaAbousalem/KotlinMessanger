@@ -1,4 +1,4 @@
-package com.example.abousalem.messengerapp.view
+package com.example.abousalem.messengerapp.view.chat_log
 
 import com.example.abousalem.messengerapp.R
 import com.example.abousalem.messengerapp.model.ChatMessage
@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.chat_to_row.view.*
 
 class ChatItems{
 
-    class ChatFromItem(val chatMessage: ChatMessage, val userFrom: User): Item<ViewHolder>() {
+    class ChatFromItem(private val chatMessage: ChatMessage, private val userFrom: User): Item<ViewHolder>() {
         override fun getLayout(): Int {
             return R.layout.chat_from_row
         }
@@ -21,7 +21,7 @@ class ChatItems{
             Picasso.get().load(userFrom.profileImageUrl).into(viewHolder.itemView.imageView_from_row)
         }
     }
-    class ChatToItem(val chatMessage: ChatMessage, val userTo: User): Item<ViewHolder>() {
+    class ChatToItem(private val chatMessage: ChatMessage, private val userTo: User): Item<ViewHolder>() {
         override fun getLayout(): Int {
             return R.layout.chat_to_row
         }

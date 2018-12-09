@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".ChatLogActivity">
+    tools:context=".view.chat_log.ChatLogActivity">
 
     <EditText
         android:id="@+id/editText_chat_log"
