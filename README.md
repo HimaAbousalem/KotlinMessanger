@@ -8,4 +8,4 @@ A Chat Application built Using:
 - Groupie
 
 
-created just for #practicing purpose.
+created just for <b>practicing</b> purpose.
