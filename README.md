@@ -6,3 +6,6 @@ A Chat Application built Using:
 - firebase
 - MVP
 - Groupie
+
+
+created just for #practicing purpose.
